@@ -1,0 +1,137 @@
+---
+title: "Imagenes y multimedia en R Markdown"
+author: "Juvenal Campos"
+date: "9/16/2020"
+output:
+  prettydoc::html_pretty:
+    theme: leonids
+    highlight: github
+---
+
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+
+  p {
+    font-size:20px;
+    font-family:Poppins;
+  }
+  
+  h1,h2,h3 {
+    color:#0b5239;
+    font-family:Poppins-Bold;
+    text-align:center;
+  }
+  
+  .author_name{
+    font-family:Poppins-Bold;
+  }
+  
+  .author_bio{
+    font-family:Poppins;
+  }
+  
+  th{
+    background-color:#e87758;
+  }
+  
+</style>
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Imágenes y multimedia.
+
+Al ser una sintaxis para crear una página web, R Markdown nos permite incluir multimedia, tal como imágenes, video u otras páginas web. 
+
+## Imágenes. 
+
+Markdown posee una sintaxis especial para colocar imágenes de manera sencilla. Esta es: 
+
+Por ejemplo, queremos colocar la siguiente [imagen](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png) en nuestro documento: 
+
+![](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png){width='100px'}
+
+Entonces, para esto, necesitamos escribir en nuestro documento el siguiente código: 
+
+```
+![](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png){width='100px'}
+```
+
+Siendo la sintaxis general la siguiente: 
+
+```
+![texto_alternativo](ubicacion_de_la_imagen){width=width height=height}
+```
+
+Instrucciones para incluir una imágen en R Markdown:
+
+* Primero escribimos `![]()`.
+
+* Después escribimos, dentro de los corchetes, el texto alternativo. Este es opcional y solo entra en acción cuando no se puede cargar la imagen correctamente. 
+
+* Después escribimos, dentro de los paréntesis, la ubicación del archivo (ya sea una `url` o una ubicación dentro de algun folder local).
+
+# Introduciendo imágenes y videos con HTML y CSS. 
+Otra forma de incluir multimedia con HTML y CSS es mediante los tags de HTML. En las siguientes lineas de código, vamos a mostrar un par de ejemplos sobre como podríamos incluir videos o imágenes dentro de nuestros documentos.
+
+**Para incluir un video de Youtube, hay que pegar el siguiente código:**
+
+```
+<iframe width="600" height = "420"
+src="https://www.youtube.com/embed/qKf2EwInKbA">
+</iframe>
+```
+<iframe width="600" height = "420"
+src="https://www.youtube.com/embed/qKf2EwInKbA">
+</iframe>
+
+**Para incluir un video de Youtube centrado**
+
+```
+<div>
+<p style = 'text-align:center;'>
+<iframe width="600" height = "420"
+src="https://www.youtube.com/embed/tgbNymZ7vqY">
+</iframe>
+</div>
+</p>
+```
+
+<div>
+<p style = 'text-align:center;'>
+<iframe width="600" height = "420"
+src="https://www.youtube.com/embed/tgbNymZ7vqY">
+</iframe>
+</div>
+</p>
+
+**Para incluir una imágen: **
+
+```
+<img src="https://pbs.twimg.com/media/EiAuAS8VoAA1-4T?format=jpg&name=large" alt="JuveR" width="300px">
+```
+<img src="https://pbs.twimg.com/media/EiAuAS8VoAA1-4T?format=jpg&name=large" alt="JuveR" width="300px">
+
+
+**Para incluir y centrar una imágen: **
+
+```
+<div>
+<p style = 'text-align:center;'>
+<img src="https://pbs.twimg.com/media/EiAAHfoU4AADis4?format=jpg&name=small" alt="JuveYell" width="300px">
+</p>
+</div>
+```
+
+<div>
+<p style = 'text-align:center;'>
+<img src="https://pbs.twimg.com/media/EiAAHfoU4AADis4?format=jpg&name=small" alt="JuveYell" width="300px">
+</p>
+</div>
+

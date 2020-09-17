@@ -1,0 +1,251 @@
+---
+title: "Texto"
+author: "Juvenal Campos"
+date: "9/16/2020"
+output:
+  prettydoc::html_pretty:
+    theme: leonids
+    highlight: github
+---
+
+<style>
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+  p {
+    font-size:20px;
+    font-family:Poppins;
+  }
+  
+  h1,h2,h3,h4,h5,h6 {
+    color:#0b5239;
+    font-family:Poppins-Bold;
+    text-align:center;
+  }
+  
+  .author_name{
+    font-family:Poppins-Bold;
+  }
+  
+  .author_bio{
+    font-family:Poppins;
+  }
+  
+  th{
+    background-color:#e87758;
+  }
+  
+</style>
+
+# Texto. 
+
+Introducir texto en R Markdown es tan sencillo como incluir texto fuera de un _chunk_. Sin embargo, si queremos que nuestro texto tenga ciertas propiedades (como negritas, letras cursivas o itálicas, que sea título o subtítulo, o que tenga color o subrayado) tenemos que hacer uso de ciertos símbolos propios de Markdown para que esto funcione. 
+
+**Nota importante**
+
+> Si no queremos usar estos símbolos, igualmente podemos hacer uso de los `tags de HTML` que vimos hace algunas clases. Los símbolos de Markdown son simplemente abreviaturas de estos tags
+
+**Otra nota importante**
+
+> Esto es válido tanto para Markdown como para RMarkdown, por lo que lo que aprendan acá pueden usarlo en cualquier otro editor de Markdown (por ejemplo, en el Piazza).
+
+# Títulos. 
+
+Si queremos escribir un título, debemos escribir el símbolo de _hashtag_ (`#`) y luego escribir el texto del título. 
+
+```
+# Título 1
+## Título 2
+### Título 3
+#### Título 4
+##### Título 5
+... y así
+```
+
+# Título 1
+## Título 2
+### Título 3
+#### Título 4
+##### Título 5
+...  y así
+
+# Texto
+
+Escribir normalmente se traduce en texto de párrafo normal por Rmarkdown (equivalente a escribir texto entre los tags `<p></p>`)
+
+## Itálicas y negritas
+
+Si encerramos texto entre asteriscos o entre guiones bajos, se va a ver como texto en itálicas. (Equivalente a escribir texto entre los tags `<em></em>`)
+
+```
+Formas de escribir texto en itálicas
+*Texto en Itálicas*
+<em>Otro texto en itálicas</em>
+```
+
+Si encerramos texto entre dos asteríscos, se va a ver en negritas. (Equivalente a escribir texto entre los tags `<b></b>`)
+
+```
+Formas de escribir texto en negritas
+**Texto en Negritas**
+<b>Otro texto en negritas</b>
+```
+
+**Texto en Negritas**
+<b>Otro texto en negritas</b>
+
+## Listas
+
+Si ponemos un asterísco al principio del renglón, se entenderá como una lista.
+
+```
+Frutas del mercado
+
+* Manzanas
+
+* Peras
+
+* Cerezas
+
+* Duraznos
+
+* Cocos
+```
+
+Frutas del mercado
+
+* Manzanas
+
+* Peras
+
+* Cerezas
+
+* Duraznos
+
+* Cocos
+
+Si empezamos con un número, se entenderá como una numeración:
+
+```
+1. Hola
+
+2. Soy
+
+3. Una
+
+4. Numeración.
+
+```
+
+1. Hola
+
+2. Soy
+
+3. Una
+
+4. Numeración.
+
+El equivalente en HTML a esto es el uso de los tags `<ul></ul>` y `<ol></ol>` para listas no ordenadas (bullets) y listas ordenadas (numeradas), respectivamente (la u es de _unordered_ y la o es de _ordered_). 
+
+Las listas anteriores se podrías escribir entonces como se muestra a continuación. 
+
+```
+<p>Frutas del mercado</p>
+<p>Exactamente igual que usando asteriscos</p>
+<ul>
+<li>Manzanas</li>
+<li>Peras</li>
+<li>Cerezas</li>
+<li>Duraznos</li>
+<li>Cocos</li>
+</ul>
+
+<Numeracion>
+<ol>
+<li>Hola</li>
+<li>Soy</li>
+<li>Una</li>
+<li>Numeración.</li>
+</ol>
+```
+
+# Links a otras páginas
+
+
+Los enlaces llevan la sintaxis siguiente:
+
+```
+[palabra que enlaza](www.paginaenlazada.com)
+```
+
+* Por ejemplo
+
+```
+Como [aquí](http://www.juvenalcampos.com).
+```
+
+Se vería así: 
+
+Como [aquí](http://www.juvenalcampos.com).
+
+# HTML y CSS (Estructura y Estilo)
+
+Si queremos escribir texto en colores o con algún formato especial, utilizamos el lenguaje de marcado HTML complementado con estilos CSS. 
+
+Por esto la importancia de saber que son equivalentes, para usarlos de manera combinada cuando se requiera.
+
+Por ejemplo:
+
+```
+# Codigo que genera el texto abajo
+Quiero que este texto se vea 
+<b style = 'color : red;'>rojo</b>, 
+y que este se vea 
+<b style = 'color : yellow; font-size: 100px;'>
+amarillo y grande.</b>
+```
+
+**Genera el siguiente texto: **
+
+Quiero que este texto se vea 
+<b style = 'color : red;'>rojo</b>, 
+y que este se vea 
+<b style = 'color : yellow; font-size: 100px;'>
+amarillo y grande.</b>
+
+## Expresiones matemáticas
+
+Las expresiones matemáticas en Markdown van encerradas dentro del símbolo de pesos, _si quieres que vayan en la misma línea_, y con dos símbolos de pesos, _si quieres que vayan en un renglón aparte_.
+
+**Info Importante**
+
+> **Las expresiones matemáticas se escriben con la sintaxis de LateX. Aprender esta sintaxis escapa del propósito de este tutorial, pero un atajo para usarla de manera sencilla es a través de la app _MathPad_, disponible en iOS.**
+
+**Ejemplo:**
+
+* Expresiones matemáticas en la misma línea: 
+
+```
+El valor de mi coeficiente es $\beta=0.6$
+```
+
+Se vería así: 
+
+> El valor de mi coeficiente es β=0.6
+
+* Expresiones matemáticas en línea aparte: 
+
+**Ejemplo: **
+
+La fórmula de la densidad es la siguiente:
+
+```
+# Codigo 
+$$\rho = \dfrac{m}{V}$$
+```
+
+$$\rho = \dfrac{m}{V}$$
+
